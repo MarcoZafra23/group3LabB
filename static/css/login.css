@@ -1,0 +1,116 @@
+/* --- LOGIN PAGE SPECIFIC STYLES --- */
+
+/* Main Card Container */
+main {
+    background-color: var(--color-card-bg); 
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(62, 187, 158, 0.2); 
+    width: 100%;
+    max-width: 420px; /* Specific narrow width for login */
+    margin: 30px 0;
+    border: 1px solid var(--color-secondary); 
+    box-sizing: border-box; 
+    transition: transform 0.3s ease;
+}
+
+main:hover {
+    transform: translateY(-3px);
+}
+
+/* Form Fieldset */
+fieldset {
+    border: 1px solid var(--color-secondary); 
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    background-color: #062E23; 
+}
+
+legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--color-primary); 
+    font-size: 1.2em;
+    text-shadow: 0 0 5px var(--color-glow);
+}
+
+/* Label Styling */
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text-dim); 
+    font-size: 0.95em;
+}
+
+/* Input Fields */
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-secondary); 
+    border-radius: 6px;
+    box-sizing: border-box; 
+    font-size: 1em;
+    background-color: #000000; 
+    color: var(--color-text-light); 
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: var(--color-primary); 
+    outline: none;
+    box-shadow: 0 0 10px var(--color-glow); 
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: var(--color-primary); 
+    color: var(--color-background); 
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+
+button[type="submit"]:hover {
+    background-color: #73E6CB; 
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px var(--color-glow);
+}
+
+/* Links (Forgot Password, etc.) */
+p {
+    margin: 15px 0;
+    text-align: center;
+}
+
+a {
+    color: var(--color-primary); 
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #73E6CB; 
+    text-shadow: 0 0 8px var(--color-glow);
+}
+
+/* JS Validation Style */
+.error-message {
+    color: var(--color-error); 
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none; 
+    font-weight: 500;
+}
