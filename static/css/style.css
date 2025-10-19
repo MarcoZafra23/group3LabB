@@ -59,7 +59,7 @@ footer {
 
 /* --- WELCOME PAGE SPECIFIC STYLES --- */
 
-/* Main Card Container for Welcome Page (Different dimensions than login) */
+/* Main Card Container for Welcome Page */
 main {
     background-color: var(--color-card-bg); 
     padding: 50px;
@@ -96,7 +96,7 @@ main {
     margin-top: 20px;
 }
 
-/* Link/Button Base Style (Used by welcome page) */
+/* Link/Button Base Style */
 .button {
     flex: 1;
     padding: 12px 20px;
