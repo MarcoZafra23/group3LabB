@@ -1,0 +1,131 @@
+/* from login */
+a {
+    color: var(--color-primary); 
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #73E6CB; 
+    text-shadow: 0 0 8px var(--color-glow);
+}
+/* end of from login */
+/* Main Card Container from login.css but altered for regis */
+main {
+    background-color: var(--color-card-bg); 
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 0 30px rgba(11, 255, 198, 0.411); 
+    max-width: 900px;
+    margin: -20px 0;
+    border: 1px solid var(--color-secondary); 
+    transition: transform 0.3s ease;
+    max-height: 430px;
+}
+
+main:hover {
+    transform: translateY(-3px);
+}
+/* end of main */
+
+/* start of content */
+fieldset {
+    border: 1px solid var(--color-secondary); 
+    padding: 25px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: #062E23; 
+}
+
+legend {
+    text-align: center;
+    padding: 0 10px;
+    font-weight: bold;
+    color: var(--color-primary); 
+    font-size: 1.2em;
+    text-shadow: 0 0 5px var(--color-glow);
+}
+
+form {
+    text-align: left;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem 2rem;
+    padding: 25px 30px;
+    width: max-content;
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+form input {
+  width: 250px;
+  padding: 8px 10px;
+  border: 2.5px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Manual placing of the form thingies */
+form label[for="fullname"],
+form #fullname {
+  grid-column: 1;
+}
+
+form label[for="email"]{
+    grid-column: 1;
+    grid-row: 3;
+}
+form #email {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+form label[for="password"]{
+    grid-column: 3;
+    grid-row: 1;
+}
+form #password {
+  grid-column: 3;
+}
+
+form label[for="confirm-password"]{
+    grid-column: 3;
+    grid-row: 3;
+}
+form #confirm-password {
+  grid-column: 3;
+}
+
+/* start of button? */
+
+form button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin-top: 1rem;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  grid-column: span 3;
+}
+
+form button:hover {
+  background: #0056b3;
+}
+
+/* end of button? */
+
+/* end of content :) */
