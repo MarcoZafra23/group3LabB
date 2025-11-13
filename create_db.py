@@ -1,6 +1,7 @@
 import os
-from sqlalchemy.engine.url import make_url
-import mysql.connector import Error
+from sqlalchemy import make_url
+import mysql.connector 
+from mysql.connector import Error
 from config import Config
 
 def create_database_if_not_exist():
@@ -12,7 +13,7 @@ def create_database_if_not_exist():
         user = url.username or ""
         password = url.password or ""
         host = url.host or ""
-        port = url.port or 5055
+        port = url.port or 3306
         database = url.database
 
         if not database:
@@ -21,8 +22,8 @@ def create_database_if_not_exist():
         conn = mysql.connector.connect(host=host, user=user, password=password, port=port)
         cur = conn.cursor()
         cur.execute(
-            f"CREATE DATABASE IF NOT EXIST `{database}` "
-            f"CHARACTER SET utf8mb4 COLLATE utfm8b4_unicode_ci"
+            f"CREATE DATABASE IF NOT EXISTS `{database}` "
+            f"CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci"
         )
         print(f"Database `{database}` is ready")
         cur.close(); conn.close()
@@ -36,4 +37,4 @@ def create_database_if_not_exist():
     
 if __name__=='__main__':
     ok = create_database_if_not_exist()
-    print("Done" if ok else "Failed")
+    print("Done" if ok else "Failed to create database")
